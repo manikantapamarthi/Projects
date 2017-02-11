@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170211081226) do
+ActiveRecord::Schema.define(version: 20170211110803) do
 
   create_table "project_lists", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.date     "startdate"
     t.date     "enddate"
-    t.date     "duration"
+    t.integer  "duration"
     t.text     "description", limit: 65535
     t.string   "roles"
     t.datetime "created_at",                null: false
