@@ -13,6 +13,7 @@ class ProjectListsController < ApplicationController
 		@project_list = ProjectList.new(project_list_params)
 		respond_to do |format|
 			if @project_list.save
+				flash[:notice] = "Project Created sucessfully"
 				redirect_to @project_list
 			else
 				format.html { render 'new'}
@@ -33,11 +34,13 @@ class ProjectListsController < ApplicationController
 	def update
 		
 		if @project_list.update(project_list_params)
+			flash[:notice] = "Updated sucessfully"
 			redirect_to @project_list
 		end
 	end
 	def destroy
 		@project_list.destroy
+		flash[:notice] = "Deleted sucessfully"
 		redirect_to project_lists_url
 	end
 	private
