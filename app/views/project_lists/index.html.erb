@@ -1,0 +1,30 @@
+<div class="container">
+	<h2>Projects</h2>
+	<%= link_to "Add New Project", new_project_list_path, class: 'btn btn-mini' %>
+	<% if @project_lists.present? %>
+	<div class= "">
+	<% @project_lists.each do |project| %>
+	<div class="buttons" style="float:right;">
+		    <%= link_to 'Edit', edit_project_list_path(project),class: 'btn btn-mini btn-info' %>
+		    <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-mini btn-danger'  %>
+		</div>
+		<strong>Title :</strong>
+		<p><%= project.title %></p>
+		<strong>StartDate :</strong><br>
+		<p><%= project.startdate %></p>
+		<strong>EndDate :</strong><br>
+		<p><%= project.enddate %></p>
+		<strong>Duration :</strong><br>
+		<p><%= project.duration %></p>
+		<strong>Descrtiption :</strong><br>
+		<p><%= project.description %></p>
+		<strong>Roles :</strong><br>
+		<p><%= project.roles %></p>
+		
+	<% end %>
+</div>
+<% end %>
+<hr class="my-4">
+</div>
+
+

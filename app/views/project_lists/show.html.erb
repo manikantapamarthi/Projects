@@ -1,0 +1,17 @@
+<div class="container">
+	<h2>Project</h2>
+	<strong>Title</strong><br>
+	<p><%= @project_list.title %></p>
+	<strong>StartDate</strong><br>
+	<p><%= @project_list.startdate %></p>
+	<strong>EndDate</strong><br>
+	<p><%= @project_list.enddate %></p>
+	<strong>Duration</strong><br>
+	<p><%= @project_list.duration %></p>
+	<strong>Discrtiption</strong><br>
+	<p><%= @project_list.description %></p>
+	<strong>Roles</strong><br>
+	<p><%= @project_list.roles %></p>
+	<%= link_to 'Edit', edit_project_list_path(@project_list) %> |
+	<%= link_to 'Back', project_list_path %>
+</div>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  startdate: 2017-02-11
+  enddate: 2017-02-11
+  duration: 2017-02-11
+  description: MyText
+  roles: MyString
+
+two:
+  title: MyString
+  startdate: 2017-02-11
+  enddate: 2017-02-11
+  duration: 2017-02-11
+  description: MyText
+  roles: MyString
