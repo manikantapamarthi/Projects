@@ -11,8 +11,14 @@ class ProjectListsController < ApplicationController
 
 	def create
 		@project_list = ProjectList.new(project_list_params)
-		if @project_list.save
-			redirect_to @project_list
+		respond_to do |format|
+			if @project_list.save
+				redirect_to @project_list
+			else
+				format.html { render 'new'}
+		        format.json { render json: @project_list.errors, status: :unprocessable_entity }
+
+			end
 		end
 	end
 

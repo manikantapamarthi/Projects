@@ -1,4 +1,10 @@
 <%= form_for(@project_list) do |f| %>
+	<%#= debug(@project_list.errors.full_messages) %>
+      <ul>
+      <% @project_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      </ul>
+  <% end %>
 <div class="form-group row">
 	<div class="control-label">
 		<%= f.label :title %>
